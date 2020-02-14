@@ -1,7 +1,10 @@
 require "yaml"
 
+<<<<<<< HEAD
 APOLOGY = "Sorry, that emoticon was not found"
 
+=======
+>>>>>>> 3ce314c703cbf351de419f0d3b4bc7e23c88f6a9
 #
 def load_library(path)
   file_hash = YAML.load_file(path)
@@ -19,8 +22,12 @@ end
 #
 def get_japanese_emoticon(path, english_emo)
   emoticons = load_library(path)
+<<<<<<< HEAD
   match = emoticons["get_emoticon"][english_emo]
   return match ? match : APOLOGY
+=======
+  emoticons[english_emo]
+>>>>>>> 3ce314c703cbf351de419f0d3b4bc7e23c88f6a9
 end
 
 #
@@ -33,9 +40,13 @@ end
 #
 def get_english_meaning(path, japanese_emo)
   emoticons = load_library(path)
+<<<<<<< HEAD
   
   match = emoticons["get_meaning"][japanese_emo]
   return match ? match : APOLOGY
+=======
+  emoticons[japanese_emo]
+>>>>>>> 3ce314c703cbf351de419f0d3b4bc7e23c88f6a9
 end
 
 #
